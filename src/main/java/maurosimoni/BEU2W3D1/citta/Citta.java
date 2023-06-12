@@ -1,4 +1,4 @@
-package com.BEU2W2D3.gestioneprenotazioni.entities;
+package maurosimoni.BEU2W3D1.citta;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

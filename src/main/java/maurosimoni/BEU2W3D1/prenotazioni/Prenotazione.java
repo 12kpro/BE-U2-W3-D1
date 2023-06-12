@@ -1,10 +1,12 @@
-package com.BEU2W2D3.gestioneprenotazioni.entities;
+package maurosimoni.BEU2W3D1.prenotazioni;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import maurosimoni.BEU2W3D1.postazioni.Postazione;
+import maurosimoni.BEU2W3D1.users.User;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDate;
@@ -23,9 +25,9 @@ public class Prenotazione {
     @ManyToOne(cascade = CascadeType.ALL)
     private Postazione postazione;
     @ManyToOne(cascade = CascadeType.ALL)
-    private Utente utente;
+    private User utente;
 
-    public Prenotazione(LocalDate data, Postazione postazione, Utente utente) {
+    public Prenotazione(LocalDate data, Postazione postazione, User utente) {
         this.data = data;
         this.postazione = postazione;
         this.utente = utente;

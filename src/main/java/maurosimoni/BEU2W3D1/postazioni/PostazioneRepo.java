@@ -1,7 +1,7 @@
-package com.BEU2W2D3.gestioneprenotazioni.repositories;
+package maurosimoni.BEU2W3D1.postazioni;
 
-import com.BEU2W2D3.gestioneprenotazioni.entities.Citta;
-import com.BEU2W2D3.gestioneprenotazioni.entities.Postazione;
+import maurosimoni.BEU2W3D1.citta.Citta;
+import maurosimoni.BEU2W3D1.postazioni.Postazione;
 import com.BEU2W2D3.gestioneprenotazioni.utils.TipoPostazione;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

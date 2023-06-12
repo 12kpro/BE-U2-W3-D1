@@ -1,10 +1,8 @@
-package com.BEU2W2D3.gestioneprenotazioni.services;
+package maurosimoni.BEU2W3D1.citta;
 
-import com.BEU2W2D3.gestioneprenotazioni.entities.Citta;
-import com.BEU2W2D3.gestioneprenotazioni.exceptions.BadRequestException;
-import com.BEU2W2D3.gestioneprenotazioni.exceptions.NotFoundException;
-import com.BEU2W2D3.gestioneprenotazioni.payloads.CittaRegistrationPayload;
-import com.BEU2W2D3.gestioneprenotazioni.repositories.CittaRepo;
+import maurosimoni.BEU2W3D1.citta.payload.CittaRegistrationPayload;
+import maurosimoni.BEU2W3D1.exceptions.BadRequestException;
+import maurosimoni.BEU2W3D1.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

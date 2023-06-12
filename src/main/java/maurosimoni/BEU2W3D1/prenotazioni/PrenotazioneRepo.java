@@ -1,6 +1,5 @@
-package com.BEU2W2D3.gestioneprenotazioni.repositories;
+package maurosimoni.BEU2W3D1.prenotazioni;
 
-import com.BEU2W2D3.gestioneprenotazioni.entities.Prenotazione;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

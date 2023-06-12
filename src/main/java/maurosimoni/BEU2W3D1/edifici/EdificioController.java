@@ -1,9 +1,9 @@
-package com.BEU2W2D3.gestioneprenotazioni.controllers;
+package maurosimoni.BEU2W3D1.edifici;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/postazioni")
-public class PostazioneController {
+@RequestMapping("/edificio")
+public class EdificioController {
 }

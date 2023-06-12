@@ -1,8 +1,6 @@
-package com.BEU2W2D3.gestioneprenotazioni.controllers;
+package maurosimoni.BEU2W3D1.citta;
 
-import com.BEU2W2D3.gestioneprenotazioni.entities.Citta;
-import com.BEU2W2D3.gestioneprenotazioni.payloads.CittaRegistrationPayload;
-import com.BEU2W2D3.gestioneprenotazioni.services.CittaSrv;
+import maurosimoni.BEU2W3D1.citta.payload.CittaRegistrationPayload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

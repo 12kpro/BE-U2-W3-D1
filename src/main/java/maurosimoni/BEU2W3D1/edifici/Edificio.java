@@ -1,4 +1,4 @@
-package maurosimoni.BEU2W3D1.buildings;
+package maurosimoni.BEU2W3D1.edifici;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

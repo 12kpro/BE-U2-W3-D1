@@ -1,7 +1,6 @@
-package maurosimoni.BEU2W3D1.buildings;
+package maurosimoni.BEU2W3D1.edifici;
 
 import maurosimoni.BEU2W3D1.exceptions.NotFoundException;
-import maurosimoni.BEU2W3D1.users.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

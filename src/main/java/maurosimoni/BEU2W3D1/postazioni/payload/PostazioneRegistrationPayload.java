@@ -1,4 +1,4 @@
-package com.BEU2W2D3.gestioneprenotazioni.payloads;
+package maurosimoni.BEU2W3D1.postazioni.payload;
 
 import com.BEU2W2D3.gestioneprenotazioni.entities.Edificio;
 import com.BEU2W2D3.gestioneprenotazioni.utils.TipoPostazione;

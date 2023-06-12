@@ -1,8 +1,9 @@
-package com.BEU2W2D3.gestioneprenotazioni.validators;
+package maurosimoni.BEU2W3D1.validators;
 
-import com.BEU2W2D3.gestioneprenotazioni.payloads.PrenotazioneRegistrationPayload;
+
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
+
 
 import java.lang.annotation.*;
 

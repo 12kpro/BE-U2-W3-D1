@@ -1,10 +1,8 @@
-package com.BEU2W2D3.gestioneprenotazioni.services;
+package maurosimoni.BEU2W3D1.postazioni;
 
-import com.BEU2W2D3.gestioneprenotazioni.entities.Postazione;
-import com.BEU2W2D3.gestioneprenotazioni.exceptions.BadRequestException;
-import com.BEU2W2D3.gestioneprenotazioni.exceptions.NotFoundException;
-import com.BEU2W2D3.gestioneprenotazioni.payloads.PostazioneRegistrationPayload;
-import com.BEU2W2D3.gestioneprenotazioni.repositories.PostazioneRepo;
+import maurosimoni.BEU2W3D1.exceptions.BadRequestException;
+import maurosimoni.BEU2W3D1.exceptions.NotFoundException;
+import maurosimoni.BEU2W3D1.postazioni.payload.PostazioneRegistrationPayload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

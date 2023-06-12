@@ -1,4 +1,4 @@
-package com.BEU2W2D3.gestioneprenotazioni.payloads;
+package maurosimoni.BEU2W3D1.citta.payload;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;

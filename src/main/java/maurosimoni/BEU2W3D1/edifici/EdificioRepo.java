@@ -1,4 +1,4 @@
-package maurosimoni.BEU2W3D1.buildings;
+package maurosimoni.BEU2W3D1.edifici;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

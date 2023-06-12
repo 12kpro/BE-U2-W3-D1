@@ -1,4 +1,4 @@
-package com.BEU2W2D3.gestioneprenotazioni.entities;
+package maurosimoni.BEU2W3D1.postazioni;
 
 import com.BEU2W2D3.gestioneprenotazioni.utils.TipoPostazione;
 import jakarta.persistence.*;
@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import maurosimoni.BEU2W3D1.edifici.Edificio;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package com.BEU2W2D3.gestioneprenotazioni.payloads;
+package maurosimoni.BEU2W3D1.prenotazioni.payload;
 
 import com.BEU2W2D3.gestioneprenotazioni.validators.PrenotazioneDateConstraint;
 import jakarta.validation.constraints.NotNull;

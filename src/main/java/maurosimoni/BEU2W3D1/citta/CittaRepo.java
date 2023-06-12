@@ -1,6 +1,6 @@
-package com.BEU2W2D3.gestioneprenotazioni.repositories;
+package maurosimoni.BEU2W3D1.citta;
 
-import com.BEU2W2D3.gestioneprenotazioni.entities.Citta;
+import maurosimoni.BEU2W3D1.citta.Citta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

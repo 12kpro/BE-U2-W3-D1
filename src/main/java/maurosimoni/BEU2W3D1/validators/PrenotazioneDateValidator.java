@@ -1,4 +1,4 @@
-package com.BEU2W2D3.gestioneprenotazioni.validators;
+package maurosimoni.BEU2W3D1.validators;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

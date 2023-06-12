@@ -1,4 +1,4 @@
-package maurosimoni.BEU2W3D1.buildings;
+package maurosimoni.BEU2W3D1.edifici;
 
 import jakarta.persistence.AttributeConverter;
 import org.springframework.beans.factory.annotation.Value;
