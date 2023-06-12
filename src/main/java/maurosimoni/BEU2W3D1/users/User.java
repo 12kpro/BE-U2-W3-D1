@@ -31,9 +31,6 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @OneToMany(mappedBy = "user", orphanRemoval = true)
-    @JsonManagedReference
-    private List<Device> devices = new ArrayList<>();
 
     public User(String name, String surname, String userName, String email, String password) {
         super();

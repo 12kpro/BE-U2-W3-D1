@@ -18,7 +18,7 @@ public class PostazioneSrv {
     private PostazioneRepo postazioneRepo;
 
     public Postazione create(PostazioneRegistrationPayload p) {
-        postazioneRepo.findByDescrizione(p.getDescrizione()).ifPresent(Postazione -> {
+        postazioneRepo.findByTipoAndEdificio(p.getTipo(),p.getEdificio()).ifPresent(Postazione -> {
             throw new BadRequestException("Postazione " + Postazione. + " già in presente!");
         });
         Postazione newPostazione = new Postazione(u.getNome(), u.getCognome(), u.getEmail());
@@ -39,13 +39,14 @@ public class PostazioneSrv {
         return postazioneRepo.findById(id).orElseThrow(() -> new NotFoundException("Postazione non trovato!"));
     }
 
-    public Postazione findByIdAndUpdate(UUID id, Postazione u) throws NotFoundException {
+    public Postazione findByIdAndUpdate(UUID id, Postazione p) throws NotFoundException {
         Postazione found = this.findById(id);
 
         found.setId(id);
-        found.setNome(u.getNome());
-        found.setCognome(u.getCognome());
-        found.setEmail(u.getEmail());
+        found.setDescrizione(p.getDescrizione());
+        found.setTipo(p.getTipo());
+        found.setEdificio(p.getEdificio());
+        found.setOccupanti(p.getOccupanti());
 
         return postazioneRepo.save(found);
     }

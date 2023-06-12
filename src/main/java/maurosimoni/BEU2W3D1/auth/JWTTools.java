@@ -4,8 +4,9 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.security.Keys;
-import maurosimoni.BEU2W2D5.exception.UnauthorizedException;
-import maurosimoni.BEU2W2D5.users.User;
+
+import maurosimoni.BEU2W3D1.exceptions.UnauthorizedException;
+import maurosimoni.BEU2W3D1.users.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

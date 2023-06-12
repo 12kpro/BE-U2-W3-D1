@@ -3,6 +3,7 @@
 
 import com.github.javafaker.Faker;
 import lombok.extern.slf4j.Slf4j;
+
 import maurosimoni.BEU2W3D1.citta.CittaSrv;
 import maurosimoni.BEU2W3D1.edifici.Edificio;
 import maurosimoni.BEU2W3D1.edifici.EdificioSrv;
@@ -56,8 +57,10 @@ public class PrenotazioniRunner implements CommandLineRunner {
 
                 String name = faker.name().firstName();
                 String surname = faker.name().lastName();
+                String username = faker.name().username();
                 String email = faker.internet().emailAddress();
-                UserCreatePayload user = new UserCreatePayload(name, surname, email);
+                String password = "1234";
+                UserCreatePayload user = new UserCreatePayload(name, surname, username, email, password);
                 utenteSrv.create(user);
             } catch (Exception e) {
                 System.out.println(e);

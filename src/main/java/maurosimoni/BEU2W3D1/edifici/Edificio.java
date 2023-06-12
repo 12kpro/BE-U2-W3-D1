@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import maurosimoni.BEU2W3D1.citta.Citta;
+import maurosimoni.BEU2W3D1.utils.CodeConverter;
 
 import java.util.UUID;
 @AllArgsConstructor

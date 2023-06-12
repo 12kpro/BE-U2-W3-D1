@@ -1,3 +1,22 @@
+package maurosimoni.BEU2W3D1.auth;
+
+import maurosimoni.BEU2W3D1.auth.JWTTools;
+import maurosimoni.BEU2W3D1.auth.payloads.AuthenticationSuccessfullPayload;
+import maurosimoni.BEU2W3D1.exceptions.NotFoundException;
+import maurosimoni.BEU2W3D1.exceptions.UnauthorizedException;
+import maurosimoni.BEU2W3D1.users.User;
+import maurosimoni.BEU2W3D1.users.UsersService;
+import maurosimoni.BEU2W3D1.users.payload.UserCreatePayload;
+import maurosimoni.BEU2W3D1.users.payload.UserLoginPayload;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
@@ -9,14 +28,14 @@ public class AuthController {
     private PasswordEncoder bcrypt;
 
     @PostMapping("/register")
-    public ResponseEntity<User> register(@RequestBody @Validated UserRegistrationPayload body) {
+    public ResponseEntity<User> register(@RequestBody @Validated UserCreatePayload body) {
 
         body.setPassword(bcrypt.encode(body.getPassword()));
         User createdUser = usersService.create(body);
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
     @PostMapping("/login")
-    public ResponseEntity<AuthenticationSuccessfullPayload> login(@RequestBody maurosimoni.BEU2W2D5.users.payload.UserLoginPayload body)
+    public ResponseEntity<AuthenticationSuccessfullPayload> login(@RequestBody UserLoginPayload body)
             throws NotFoundException {
 
         User user = usersService.findByUserName(body.getUserName());

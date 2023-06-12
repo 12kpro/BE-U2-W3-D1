@@ -1,11 +1,11 @@
 package maurosimoni.BEU2W3D1.postazioni.payload;
 
-import com.BEU2W2D3.gestioneprenotazioni.entities.Edificio;
-import com.BEU2W2D3.gestioneprenotazioni.utils.TipoPostazione;
-import jakarta.persistence.ManyToOne;
+
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
+import maurosimoni.BEU2W3D1.edifici.Edificio;
+import maurosimoni.BEU2W3D1.utils.TipoPostazione;
 
 @Getter
 public class PostazioneRegistrationPayload {

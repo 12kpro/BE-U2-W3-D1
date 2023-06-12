@@ -1,8 +1,9 @@
 package maurosimoni.BEU2W3D1.prenotazioni.payload;
 
-import com.BEU2W2D3.gestioneprenotazioni.validators.PrenotazioneDateConstraint;
+
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
+import maurosimoni.BEU2W3D1.validators.PrenotazioneDateConstraint;
 
 import java.time.LocalDate;
 import java.util.UUID;

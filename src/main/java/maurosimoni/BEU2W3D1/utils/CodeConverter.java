@@ -1,4 +1,4 @@
-package maurosimoni.BEU2W3D1.edifici;
+package maurosimoni.BEU2W3D1.utils;
 
 import jakarta.persistence.AttributeConverter;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,13 +19,13 @@ public class CodeConverter implements AttributeConverter<String, String> {
     private static final String ALGORITHM = "AES/ECB/PKCS5Padding";
     private static String secret;
 
-    @Value("${spring.application.bcrypt.secret}")
-    public void setSecret(String bcryptKey) {
-        secret = bcryptKey;
+    @Value("${spring.application.crypt.secret}")
+    public void setSecret(String cryptKey) {
+        secret = cryptKey;
     }
 
     @Override
-    public String convertToDatabaseColumn(String creditCardNumber) {
+    public String convertToDatabaseColumn(String str) {
 
         try {
             Key key = new SecretKeySpec(secret.getBytes(), "AES");
@@ -33,7 +33,7 @@ public class CodeConverter implements AttributeConverter<String, String> {
 
             c.init(Cipher.ENCRYPT_MODE, key);
 
-            return Base64.getEncoder().encodeToString(c.doFinal(creditCardNumber.getBytes()));
+            return Base64.getEncoder().encodeToString(c.doFinal(str.getBytes()));
 
         } catch (RuntimeException | NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException
                  | IllegalBlockSizeException | BadPaddingException e) {
@@ -44,13 +44,13 @@ public class CodeConverter implements AttributeConverter<String, String> {
     }
 
     @Override
-    public String convertToEntityAttribute(String encryptedCreditCard) {
+    public String convertToEntityAttribute(String encryptedStr) {
         Key key = new SecretKeySpec(secret.getBytes(), "AES");
         try {
             Cipher c = Cipher.getInstance(ALGORITHM);
             c.init(Cipher.DECRYPT_MODE, key);
 
-            return new String(c.doFinal(Base64.getDecoder().decode(encryptedCreditCard)));
+            return new String(c.doFinal(Base64.getDecoder().decode(encryptedStr)));
 
         } catch (Exception e) {
             System.out.println(e);

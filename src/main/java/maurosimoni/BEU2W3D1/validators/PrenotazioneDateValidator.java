@@ -6,7 +6,7 @@ import jakarta.validation.ConstraintValidatorContext;
 import java.time.LocalDate;
 
 public class PrenotazioneDateValidator implements ConstraintValidator<PrenotazioneDateConstraint, LocalDate> {
-    @Override
+
     public void initialize(PrenotazioneDateValidator prenotazioneDate) {
     }
 
